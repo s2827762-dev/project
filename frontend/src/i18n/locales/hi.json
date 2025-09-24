@@ -1,0 +1,103 @@
+{
+  "app": {
+    "name": "आरोग्य सहायक",
+    "tagline": "आपका स्वास्थ्य साथी"
+  },
+  "navigation": {
+    "home": "होम",
+    "medicines": "मेरी दवाएं",
+    "records": "मेरे रिकॉर्ड",
+    "appointments": "अपॉइंटमेंट",
+    "points": "आरोग्य पॉइंट्स",
+    "settings": "सेटिंग्स"
+  },
+  "home": {
+    "welcome": "वापस स्वागत है!",
+    "todaysMedicines": "आज की दवाएं",
+    "upcomingAppointments": "आगामी अपॉइंटमेंट",
+    "arogyaPoints": "आरोग्य पॉइंट्स",
+    "quickActions": "त्वरित कार्य"
+  },
+  "medicines": {
+    "title": "मेरी दवाएं",
+    "morning": "सुबह",
+    "afternoon": "दोपहर",
+    "night": "रात",
+    "markAsTaken": "लिया गया चिह्नित करें",
+    "taken": "लिया गया",
+    "missed": "छूट गया",
+    "dosage": "खुराक",
+    "instructions": "निर्देश",
+    "noMedicines": "इस समय कोई दवा निर्धारित नहीं है"
+  },
+  "records": {
+    "title": "मेरे स्वास्थ्य रिकॉर्ड",
+    "locked": "लॉक्ड रिकॉर्ड",
+    "unlocked": "अनलॉक्ड रिकॉर्ड",
+    "scanToUnlock": "अनलॉक करने के लिए QR कोड स्कैन करें",
+    "aiSummary": "AI सारांश",
+    "fullTranscript": "पूरा ट्रांसक्रिप्ट",
+    "playAudio": "ऑडियो चलाएं",
+    "date": "तारीख",
+    "doctor": "डॉक्टर",
+    "noRecords": "कोई स्वास्थ्य रिकॉर्ड उपलब्ध नहीं"
+  },
+  "appointments": {
+    "title": "अपॉइंटमेंट",
+    "upcoming": "आगामी",
+    "past": "पिछले",
+    "joinConsultation": "परामर्श में शामिल हों",
+    "reschedule": "पुनर्निर्धारण",
+    "cancel": "रद्द करें",
+    "doctor": "डॉ.",
+    "time": "समय",
+    "type": "प्रकार",
+    "inPerson": "व्यक्तिगत",
+    "teleConsult": "टेली-परामर्श",
+    "noAppointments": "कोई अपॉइंटमेंट निर्धारित नहीं"
+  },
+  "points": {
+    "title": "आरोग्य पॉइंट्स",
+    "totalPoints": "कुल पॉइंट्स",
+    "thisWeek": "इस सप्ताह",
+    "thisMonth": "इस महीने",
+    "leaderboard": "लीडरबोर्ड",
+    "achievements": "उपलब्धियां",
+    "earnedBy": "द्वारा अर्जित",
+    "takingMedicine": "समय पर दवा लेना",
+    "attendingAppointments": "अपॉइंटमेंट में भाग लेना",
+    "loggingSymptoms": "लक्षण लॉग करना",
+    "healthyHabits": "स्वस्थ आदतें बनाए रखना"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "language": "भाषा",
+    "notifications": "सूचनाएं",
+    "privacy": "गोपनीयता",
+    "help": "सहायता और समर्थन",
+    "about": "के बारे में",
+    "logout": "लॉगआउट"
+  },
+  "common": {
+    "save": "सेव करें",
+    "cancel": "रद्द करें",
+    "delete": "डिलीट करें",
+    "edit": "संपादित करें",
+    "add": "जोड़ें",
+    "search": "खोजें",
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "success": "सफलता",
+    "retry": "पुनः प्रयास करें",
+    "close": "बंद करें",
+    "next": "अगला",
+    "previous": "पिछला",
+    "done": "हो गया"
+  },
+  "offline": {
+    "title": "आप ऑफलाइन हैं",
+    "message": "कुछ सुविधाएं सीमित हो सकती हैं। कनेक्शन बहाल होने पर डेटा सिंक हो जाएगा।",
+    "syncPending": "सिंक पेंडिंग",
+    "lastSync": "अंतिम सिंक"
+  }
+}

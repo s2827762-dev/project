@@ -1,0 +1,103 @@
+{
+  "app": {
+    "name": "Arogya Sahayak",
+    "tagline": "Your Health Companion"
+  },
+  "navigation": {
+    "home": "Home",
+    "medicines": "My Medicines",
+    "records": "My Records",
+    "appointments": "Appointments",
+    "points": "Arogya Points",
+    "settings": "Settings"
+  },
+  "home": {
+    "welcome": "Welcome back!",
+    "todaysMedicines": "Today's Medicines",
+    "upcomingAppointments": "Upcoming Appointments",
+    "arogyaPoints": "Arogya Points",
+    "quickActions": "Quick Actions"
+  },
+  "medicines": {
+    "title": "My Medicines",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "night": "Night",
+    "markAsTaken": "Mark as Taken",
+    "taken": "Taken",
+    "missed": "Missed",
+    "dosage": "Dosage",
+    "instructions": "Instructions",
+    "noMedicines": "No medicines scheduled for this time"
+  },
+  "records": {
+    "title": "My Health Records",
+    "locked": "Locked Record",
+    "unlocked": "Unlocked Record",
+    "scanToUnlock": "Scan QR code to unlock",
+    "aiSummary": "AI Summary",
+    "fullTranscript": "Full Transcript",
+    "playAudio": "Play Audio",
+    "date": "Date",
+    "doctor": "Doctor",
+    "noRecords": "No health records available"
+  },
+  "appointments": {
+    "title": "Appointments",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "joinConsultation": "Join Consultation",
+    "reschedule": "Reschedule",
+    "cancel": "Cancel",
+    "doctor": "Dr.",
+    "time": "Time",
+    "type": "Type",
+    "inPerson": "In-Person",
+    "teleConsult": "Tele-Consult",
+    "noAppointments": "No appointments scheduled"
+  },
+  "points": {
+    "title": "Arogya Points",
+    "totalPoints": "Total Points",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "leaderboard": "Leaderboard",
+    "achievements": "Achievements",
+    "earnedBy": "Earned by",
+    "takingMedicine": "Taking medicines on time",
+    "attendingAppointments": "Attending appointments",
+    "loggingSymptoms": "Logging symptoms",
+    "healthyHabits": "Maintaining healthy habits"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "notifications": "Notifications",
+    "privacy": "Privacy",
+    "help": "Help & Support",
+    "about": "About",
+    "logout": "Logout"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "retry": "Retry",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "done": "Done"
+  },
+  "offline": {
+    "title": "You're Offline",
+    "message": "Some features may be limited. Data will sync when connection is restored.",
+    "syncPending": "Sync Pending",
+    "lastSync": "Last synced"
+  }
+}
