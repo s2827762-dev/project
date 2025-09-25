@@ -38,7 +38,7 @@ export interface HealthRecord {
   summary?: string;
 }
 
-export interface ArogyaPointsData {
+export interface HealthAxisPointsData {
   total_points: number;
   this_week: number;
   this_month: number;
@@ -152,14 +152,14 @@ export const api = {
     }
   },
 
-  // Arogya Points
-  async getArogyaPoints(): Promise<ArogyaPointsData> {
+  // HealthAxis Points
+  async getHealthAxisPoints(): Promise<HealthAxisPointsData> {
     try {
       const response = await fetch(`${API_BASE_URL}/points/`);
-      if (!response.ok) throw new Error('Failed to fetch Arogya points');
+      if (!response.ok) throw new Error('Failed to fetch HealthAxis points');
       return await response.json();
     } catch (error) {
-      console.error('Error fetching Arogya points:', error);
+      console.error('Error fetching HealthAxis points:', error);
       // Return mock data as fallback
       return {
         total_points: 1250,

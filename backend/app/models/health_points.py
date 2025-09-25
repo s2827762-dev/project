@@ -5,8 +5,8 @@ from sqlalchemy.orm import relationship
 from app.core.database import Base
 
 
-class ArogyaPoints(Base):
-    __tablename__ = "arogya_points"
+class HealthPoints(Base):
+    __tablename__ = "health_points"
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
@@ -31,4 +31,4 @@ class ArogyaPoints(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     
     # Relationships
-    user = relationship("User", back_populates="arogya_points")
+    user = relationship("User", back_populates="health_points")

@@ -44,4 +44,4 @@ class User(Base):
     health_records = relationship("HealthRecord", back_populates="user")
     symptom_logs = relationship("SymptomLog", back_populates="user")
     device_data = relationship("DeviceData", back_populates="user")
-    arogya_points = relationship("ArogyaPoints", back_populates="user")
+    health_points = relationship("HealthPoints", back_populates="user")

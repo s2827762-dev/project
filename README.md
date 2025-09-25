@@ -1,10 +1,10 @@
-# 🌿 Arogya Sahayak - AI-Powered Community Health Ecosystem
+# 🏥 HEALTHAXIS - AI-Powered Community Health Ecosystem
 
 **Offline-first healthcare platform for rural India with multilingual support**
 
 ## 🎯 Vision
 
-Arogya Sahayak is an **offline-first, AI-powered community health ecosystem** designed for rural India. The platform empowers patients with low digital literacy and doctors in semi-connected areas through **Adaptive Connectivity** — fully functional offline, syncing intelligently when internet is available.
+HEALTHAXIS is an **offline-first, AI-powered community health ecosystem** designed for rural India. The platform empowers patients with low digital literacy and doctors in semi-connected areas through **Adaptive Connectivity** — fully functional offline, syncing intelligently when internet is available.
 
 ## 🌍 Language Support
 
@@ -27,7 +27,7 @@ project/
 
 1. **Patient Registration** - Assisted onboarding via OTP & demographics
 2. **Consultation & Handover** - Voice-to-prescription with QR sync
-3. **Patient Daily Usage** - Medicine tracking & Arogya Points
+3. **Patient Daily Usage** - Medicine tracking & Health Points
 4. **Secure Record Access** - Digital Safe with encrypted storage
 5. **Follow-up & Data Sync** - Tele-consultations with Google Meet
 
@@ -38,7 +38,7 @@ project/
 - 🗣️ Voice assistance and large button accessibility
 - 💊 Medicine tracker with photo recognition
 - 🔒 Digital Safe for encrypted health records
-- 🎮 Gamification through Arogya Points
+- 🎮 Gamification through Health Points
 - 📱 Offline-first with smart sync
 
 ### Doctor/Clinic Features
@@ -121,7 +121,7 @@ npm run dev
 2. **My Medicines** - Morning/Afternoon/Night medicine tracker
 3. **My Records** - Encrypted consultation history
 4. **Appointments** - Upcoming visits with Google Meet links
-5. **Arogya Points** - Gamification and health achievements
+5. **Health Points** - Gamification and health achievements
 6. **Settings** - Language, notifications, sync preferences
 
 ## 🔧 Technology Stack
@@ -168,4 +168,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ for rural India's healthcare transformation**
+**HEALTHAXIS - Built with ❤️ for rural India's healthcare transformation**

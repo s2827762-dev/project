@@ -4,7 +4,7 @@ from .appointment import Appointment
 from .health_record import HealthRecord
 from .symptom_log import SymptomLog
 from .device_data import DeviceData
-from .arogya_points import ArogyaPoints
+from .health_points import HealthPoints
 
 __all__ = [
     "User",
@@ -14,5 +14,5 @@ __all__ = [
     "HealthRecord",
     "SymptomLog",
     "DeviceData",
-    "ArogyaPoints"
+    "HealthPoints"
 ]

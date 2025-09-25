@@ -5,11 +5,11 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
-    SECRET_KEY: str = "arogya-sahayak-secret-key-change-in-production"
+    SECRET_KEY: str = "healthaxis-secret-key-change-in-production"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8  # 8 days
     
     # Database
-    DATABASE_URL: str = "sqlite:///./arogya_sahayak.db"
+    DATABASE_URL: str = "sqlite:///./healthaxis.db"
     
     # CORS
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = [

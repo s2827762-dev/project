@@ -3,7 +3,7 @@ from fastapi import APIRouter
 router = APIRouter()
 
 @router.get("/")
-def get_arogya_points():
+def get_health_points():
     return {
         "total_points": 1250,
         "this_week": 180,

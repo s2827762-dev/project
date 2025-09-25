@@ -1,8 +1,8 @@
-# 🌿 Arogya Sahayak - Project Status Report
+# 🏥 HEALTHAXIS - Project Status Report
 
 ## 📋 Overview
 
-**Arogya Sahayak** is an offline-first, AI-powered community health ecosystem for rural India. The project has been successfully developed with a complete frontend-backend integration, featuring multilingual support for English, Hindi, Tamil, and Telugu.
+**HEALTHAXIS** is an offline-first, AI-powered community health ecosystem for rural India. The project has been successfully developed with a complete frontend-backend integration, featuring multilingual support for English, Hindi, Tamil, and Telugu.
 
 ## ✅ Completed Features
 
@@ -31,7 +31,7 @@
 #### 🏠 **Home Dashboard**
 - ✅ Quick access cards for all major features
 - ✅ Medicine reminders and appointment notifications
-- ✅ Arogya Points display and progress tracking
+- ✅ Health Points display and progress tracking
 - ✅ Language switcher with flag icons
 
 #### 💊 **My Medicines**
@@ -52,7 +52,7 @@
 - ✅ Doctor information, timing, and appointment types
 - ✅ Real-time appointment data from API
 
-#### 🏆 **Arogya Points**
+#### 🏆 **Health Points**
 - ✅ Gamification system with point tracking
 - ✅ Weekly and monthly progress charts
 - ✅ Community leaderboard with rankings
@@ -76,7 +76,7 @@
 - ✅ **Medicines**: CRUD operations + logging functionality
 - ✅ **Appointments**: Scheduling with Google Meet links
 - ✅ **Health Records**: Encrypted storage with QR unlock
-- ✅ **Arogya Points**: Gamification and leaderboards
+- ✅ **Health Points**: Gamification and leaderboards
 - ✅ **Symptoms**: Logging and tracking
 - ✅ **Devices**: IoT integration endpoints
 
@@ -128,7 +128,7 @@ POST /api/v1/medicines/log → Logs medicine intake (+10 points)
 GET /api/v1/appointments/ → Returns appointments with Google Meet links
 ```
 
-### ✅ Arogya Points API
+### ✅ Health Points API
 ```bash
 GET /api/v1/points/ → Returns points, leaderboard, and achievements
 ```
@@ -219,4 +219,4 @@ npm run dev
 
 **Status**: 🟢 **FULLY FUNCTIONAL** - Ready for advanced features and deployment
 
-The Arogya Sahayak platform is now a complete, working healthcare application with both frontend and backend fully integrated and tested. The core functionality is operational and ready for users.
+The HEALTHAXIS platform is now a complete, working healthcare application with both frontend and backend fully integrated and tested. The core functionality is operational and ready for users.

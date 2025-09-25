@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Arogya Sahayak",
+    "name": "HEALTHAXIS",
     "tagline": "Your Health Companion"
   },
   "navigation": {
@@ -8,14 +8,14 @@
     "medicines": "My Medicines",
     "records": "My Records",
     "appointments": "Appointments",
-    "points": "Arogya Points",
+    "points": "Health Points",
     "settings": "Settings"
   },
   "home": {
     "welcome": "Welcome back!",
     "todaysMedicines": "Today's Medicines",
     "upcomingAppointments": "Upcoming Appointments",
-    "arogyaPoints": "Arogya Points",
+    "arogyaPoints": "Health Points",
     "quickActions": "Quick Actions"
   },
   "medicines": {
@@ -57,7 +57,7 @@
     "noAppointments": "No appointments scheduled"
   },
   "points": {
-    "title": "Arogya Points",
+    "title": "Health Points",
     "totalPoints": "Total Points",
     "thisWeek": "This Week",
     "thisMonth": "This Month",

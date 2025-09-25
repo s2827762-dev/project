@@ -11,4 +11,4 @@ api_router.include_router(appointments.router, prefix="/appointments", tags=["ap
 api_router.include_router(records.router, prefix="/records", tags=["health-records"])
 api_router.include_router(symptoms.router, prefix="/symptoms", tags=["symptoms"])
 api_router.include_router(devices.router, prefix="/devices", tags=["devices"])
-api_router.include_router(points.router, prefix="/points", tags=["arogya-points"])
+api_router.include_router(points.router, prefix="/points", tags=["health-points"])

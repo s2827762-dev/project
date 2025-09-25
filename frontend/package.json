@@ -1,5 +1,5 @@
 {
-  "name": "arogya-sahayak-frontend",
+  "name": "healthaxis-frontend",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "keywords": ["healthcare", "offline-first", "multilingual", "rural-india"],
-  "author": "Arogya Sahayak Team",
+  "author": "HEALTHAXIS Team",
   "license": "MIT",
   "description": "Offline-first AI-powered community health ecosystem for rural India",
   "dependencies": {

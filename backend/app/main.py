@@ -16,7 +16,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Arogya Sahayak API",
+    title="HEALTHAXIS API",
     description="Offline-first AI-powered community health ecosystem for rural India",
     version="1.0.0",
     lifespan=lifespan
@@ -44,7 +44,7 @@ app.include_router(api_router, prefix=settings.API_V1_STR)
 @app.get("/")
 async def root():
     return {
-        "message": "Welcome to Arogya Sahayak API",
+        "message": "Welcome to HEALTHAXIS API",
         "version": "1.0.0",
         "status": "healthy"
     }
@@ -52,7 +52,7 @@ async def root():
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy", "service": "arogya-sahayak-api"}
+    return {"status": "healthy", "service": "healthaxis-api"}
 
 
 if __name__ == "__main__":
