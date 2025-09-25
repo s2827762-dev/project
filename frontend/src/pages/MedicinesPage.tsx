@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { api, Medicine as APIMedicine } from '../services/api';
+import ReminderManager from '../components/ReminderManager';
+import { notificationService } from '../services/notifications';
 
 interface Medicine {
   id: string;
@@ -18,6 +20,8 @@ const MedicinesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'morning' | 'afternoon' | 'night'>('morning');
   const [medicines, setMedicines] = useState<Medicine[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showReminderManager, setShowReminderManager] = useState(false);
+  const [selectedMedicine, setSelectedMedicine] = useState<Medicine | null>(null);
 
   // Load medicines from API
   useEffect(() => {
@@ -53,6 +57,33 @@ const MedicinesPage: React.FC = () => {
 
     loadMedicines();
   }, []);
+
+  // Listen for medicine reminder events
+  useEffect(() => {
+    const handleMedicineReminder = (event: CustomEvent) => {
+      const { medicineId, frequency, action } = event.detail;
+      if (action === 'taken') {
+        markMedicineAsTaken(medicineId, frequency);
+      }
+    };
+
+    window.addEventListener('medicineReminder', handleMedicineReminder as EventListener);
+    return () => {
+      window.removeEventListener('medicineReminder', handleMedicineReminder as EventListener);
+    };
+  }, []);
+
+  // Function to open reminder manager
+  const openReminderManager = (medicine: Medicine) => {
+    setSelectedMedicine(medicine);
+    setShowReminderManager(true);
+  };
+
+  // Function to close reminder manager
+  const closeReminderManager = () => {
+    setShowReminderManager(false);
+    setSelectedMedicine(null);
+  };
 
   // Mock data fallback
   const mockMedicines: Medicine[] = [
@@ -120,6 +151,18 @@ const MedicinesPage: React.FC = () => {
       setMedicines(prev => prev.map(med => 
         med.id === medicineId ? { ...med, taken: true } : med
       ));
+    }
+  };
+
+  // Helper function for reminder system
+  const markMedicineAsTaken = (medicineId: string, frequency: string) => {
+    // Find the medicine with matching ID and frequency
+    const medicine = medicines.find(med => 
+      med.id.includes(medicineId) && med.time === frequency
+    );
+    
+    if (medicine) {
+      handleMarkAsTaken(medicine.id);
     }
   };
 
@@ -235,26 +278,41 @@ const MedicinesPage: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* Action Button */}
+                  {/* Action Buttons */}
                   <div className="flex flex-col items-center space-y-2">
-                    {medicine.taken ? (
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center"
-                      >
-                        <span className="text-white text-xl">✓</span>
-                      </motion.div>
-                    ) : (
+                    <div className="flex items-center space-x-2">
+                      {/* Reminder Button */}
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        onClick={() => handleMarkAsTaken(medicine.id)}
-                        className="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-lg glow-green"
+                        onClick={() => openReminderManager(medicine)}
+                        className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg"
+                        title={t('reminders.title')}
                       >
-                        <span className="text-white text-xl">+</span>
+                        <span className="text-white text-sm">🔔</span>
                       </motion.button>
-                    )}
+
+                      {/* Mark as Taken Button */}
+                      {medicine.taken ? (
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center"
+                        >
+                          <span className="text-white text-xl">✓</span>
+                        </motion.div>
+                      ) : (
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => handleMarkAsTaken(medicine.id)}
+                          className="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center shadow-lg glow-green"
+                        >
+                          <span className="text-white text-xl">+</span>
+                        </motion.button>
+                      )}
+                    </div>
+                    
                     <span className={`text-xs font-medium ${
                       medicine.taken ? 'text-green-600' : 'text-gray-500'
                     }`}>
@@ -314,6 +372,18 @@ const MedicinesPage: React.FC = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Reminder Manager Modal */}
+      <AnimatePresence>
+        {showReminderManager && selectedMedicine && (
+          <ReminderManager
+            medicineId={selectedMedicine.id}
+            medicineName={selectedMedicine.name}
+            dosage={selectedMedicine.dosage}
+            onClose={closeReminderManager}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

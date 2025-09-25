@@ -92,7 +92,27 @@
     "close": "మూసివేయండి",
     "next": "తదుపరి",
     "previous": "మునుపటి",
-    "done": "పూర్తయింది"
+    "done": "పూర్తయింది",
+    "minutes": "నిమిషాలు"
+  },
+  "reminders": {
+    "title": "మందుల రిమైండర్లు",
+    "permissionRequired": "నోటిఫికేషన్ అనుమతి అవసరం",
+    "permissionDescription": "మందుల రిమైండర్లు పొందడానికి నోటిఫికేషన్లను ఎనేబుల్ చేయండి",
+    "enableNotifications": "నోటిఫికేషన్లను ఎనేబుల్ చేయండి",
+    "activeReminders": "యాక్టివ్ రిమైండర్లు",
+    "noReminders": "రిమైండర్లు సెట్ చేయలేదు",
+    "addReminder": "రిమైండర్ జోడించండి",
+    "newReminder": "కొత్త రిమైండర్",
+    "time": "సమయం",
+    "frequency": "ఫ్రీక్వెన్సీ",
+    "playSound": "అలారం సౌండ్ ప్లే చేయండి",
+    "snoozeMinutes": "స్నూజ్ వ్యవధి",
+    "setReminder": "రిమైండర్ సెట్ చేయండి",
+    "editReminder": "రిమైండర్ ఎడిట్ చేయండి",
+    "deleteReminder": "రిమైండర్ తొలగించండి",
+    "reminderSet": "రిమైండర్ విజయవంతంగా సెట్ చేయబడింది",
+    "reminderDeleted": "రిమైండర్ తొలగించబడింది"
   },
   "offline": {
     "title": "మీరు ఆఫ్లైన్లో ఉన్నారు",

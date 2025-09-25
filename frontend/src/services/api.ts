@@ -49,6 +49,36 @@ export interface HealthAxisPointsData {
   }>;
 }
 
+export interface Reminder {
+  id: number;
+  medicine_id: number;
+  user_id: number;
+  time: string;
+  frequency: string;
+  enabled: boolean;
+  sound: boolean;
+  snooze_minutes: number;
+  medicine_name?: string;
+  medicine_dosage?: string;
+}
+
+export interface ReminderCreate {
+  medicine_id: number;
+  time: string;
+  frequency: string;
+  enabled?: boolean;
+  sound?: boolean;
+  snooze_minutes?: number;
+}
+
+export interface ReminderUpdate {
+  time?: string;
+  frequency?: string;
+  enabled?: boolean;
+  sound?: boolean;
+  snooze_minutes?: number;
+}
+
 // API Functions
 export const api = {
   // Medicines
@@ -173,6 +203,80 @@ export const api = {
           { rank: 5, name: 'Sunita Devi', points: 950 }
         ]
       };
+    }
+  },
+
+  // Reminders
+  async getReminders(medicineId?: number): Promise<Reminder[]> {
+    try {
+      const url = medicineId 
+        ? `${API_BASE_URL}/reminders/?medicine_id=${medicineId}`
+        : `${API_BASE_URL}/reminders/`;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Failed to fetch reminders');
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching reminders:', error);
+      return [];
+    }
+  },
+
+  async createReminder(reminder: ReminderCreate): Promise<Reminder> {
+    try {
+      const response = await fetch(`${API_BASE_URL}/reminders/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(reminder),
+      });
+      if (!response.ok) throw new Error('Failed to create reminder');
+      return await response.json();
+    } catch (error) {
+      console.error('Error creating reminder:', error);
+      throw error;
+    }
+  },
+
+  async updateReminder(reminderId: number, update: ReminderUpdate): Promise<Reminder> {
+    try {
+      const response = await fetch(`${API_BASE_URL}/reminders/${reminderId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(update),
+      });
+      if (!response.ok) throw new Error('Failed to update reminder');
+      return await response.json();
+    } catch (error) {
+      console.error('Error updating reminder:', error);
+      throw error;
+    }
+  },
+
+  async deleteReminder(reminderId: number): Promise<void> {
+    try {
+      const response = await fetch(`${API_BASE_URL}/reminders/${reminderId}`, {
+        method: 'DELETE',
+      });
+      if (!response.ok) throw new Error('Failed to delete reminder');
+    } catch (error) {
+      console.error('Error deleting reminder:', error);
+      throw error;
+    }
+  },
+
+  async toggleReminder(reminderId: number): Promise<{ enabled: boolean }> {
+    try {
+      const response = await fetch(`${API_BASE_URL}/reminders/${reminderId}/toggle`, {
+        method: 'POST',
+      });
+      if (!response.ok) throw new Error('Failed to toggle reminder');
+      return await response.json();
+    } catch (error) {
+      console.error('Error toggling reminder:', error);
+      throw error;
     }
   }
 };

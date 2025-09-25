@@ -45,3 +45,4 @@ class User(Base):
     symptom_logs = relationship("SymptomLog", back_populates="user")
     device_data = relationship("DeviceData", back_populates="user")
     health_points = relationship("HealthPoints", back_populates="user")
+    reminders = relationship("Reminder", back_populates="user")

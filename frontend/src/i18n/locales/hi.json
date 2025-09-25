@@ -92,7 +92,27 @@
     "close": "बंद करें",
     "next": "अगला",
     "previous": "पिछला",
-    "done": "हो गया"
+    "done": "हो गया",
+    "minutes": "मिनट"
+  },
+  "reminders": {
+    "title": "दवा रिमाइंडर",
+    "permissionRequired": "नोटिफिकेशन अनुमति आवश्यक",
+    "permissionDescription": "दवा रिमाइंडर प्राप्त करने के लिए नोटिफिकेशन सक्षम करें",
+    "enableNotifications": "नोटिफिकेशन सक्षम करें",
+    "activeReminders": "सक्रिय रिमाइंडर",
+    "noReminders": "कोई रिमाइंडर सेट नहीं",
+    "addReminder": "रिमाइंडर जोड़ें",
+    "newReminder": "नया रिमाइंडर",
+    "time": "समय",
+    "frequency": "आवृत्ति",
+    "playSound": "अलार्म ध्वनि बजाएं",
+    "snoozeMinutes": "स्नूज़ अवधि",
+    "setReminder": "रिमाइंडर सेट करें",
+    "editReminder": "रिमाइंडर संपादित करें",
+    "deleteReminder": "रिमाइंडर हटाएं",
+    "reminderSet": "रिमाइंडर सफलतापूर्वक सेट",
+    "reminderDeleted": "रिमाइंडर हटा दिया गया"
   },
   "offline": {
     "title": "आप ऑफलाइन हैं",

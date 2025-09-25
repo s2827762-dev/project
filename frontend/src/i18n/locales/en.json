@@ -92,7 +92,27 @@
     "close": "Close",
     "next": "Next",
     "previous": "Previous",
-    "done": "Done"
+    "done": "Done",
+    "minutes": "minutes"
+  },
+  "reminders": {
+    "title": "Medicine Reminders",
+    "permissionRequired": "Notification Permission Required",
+    "permissionDescription": "Enable notifications to receive medicine reminders",
+    "enableNotifications": "Enable Notifications",
+    "activeReminders": "Active Reminders",
+    "noReminders": "No reminders set",
+    "addReminder": "Add Reminder",
+    "newReminder": "New Reminder",
+    "time": "Time",
+    "frequency": "Frequency",
+    "playSound": "Play alarm sound",
+    "snoozeMinutes": "Snooze duration",
+    "setReminder": "Set Reminder",
+    "editReminder": "Edit Reminder",
+    "deleteReminder": "Delete Reminder",
+    "reminderSet": "Reminder set successfully",
+    "reminderDeleted": "Reminder deleted"
   },
   "offline": {
     "title": "You're Offline",

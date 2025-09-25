@@ -5,6 +5,7 @@ from .health_record import HealthRecord
 from .symptom_log import SymptomLog
 from .device_data import DeviceData
 from .health_points import HealthPoints
+from .reminder import Reminder
 
 __all__ = [
     "User",
@@ -14,5 +15,6 @@ __all__ = [
     "HealthRecord",
     "SymptomLog",
     "DeviceData",
-    "HealthPoints"
+    "HealthPoints",
+    "Reminder"
 ]

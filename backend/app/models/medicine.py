@@ -39,6 +39,7 @@ class Medicine(Base):
     # Relationships
     user = relationship("User", back_populates="medicines")
     logs = relationship("MedicineLog", back_populates="medicine")
+    reminders = relationship("Reminder", back_populates="medicine")
 
 
 class MedicineLog(Base):
